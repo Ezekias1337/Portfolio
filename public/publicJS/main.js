@@ -4,7 +4,7 @@ let trans = () => {
     document.getElementById("body").classList.add("transition");
     window.setTimeout(() => {
         document.getElementById("body").classList.remove("transition")
-    }, 1000)
+    }, 550)
 }
 
 checkbox.addEventListener("click", function () {
