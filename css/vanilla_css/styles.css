@@ -1,6 +1,10 @@
 html {
   height: 100%; }
 
+body[data-theme='dark'] {
+  background-color: #333333;
+  color: #FCFCFC; }
+
 body {
   background-color: #FCFCFC; }
 

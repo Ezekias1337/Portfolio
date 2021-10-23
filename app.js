@@ -14,7 +14,7 @@ const app = express();
 app.use(methodOverride("_method"));
 
 mongoose
-  .connect(dbURI)
+  .connect(dbURI.dbURI)
   .then((result) => {
     app.listen(3000);
   })

@@ -1,31 +1,40 @@
 <%- include("./partials/head.ejs") %>
 
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="title">Light / Dark Mode</div>
-    </div>
-  </div>
-</div>
+<html>
 
-<div class="toggle-container container">
-  <div class="row">
-    <div class="col">
-      <input id="switch" name="theme" type="checkbox" /><label for="switch"
-        >Toggle</label
-      >
-    </div>
-  </div>
-</div>
+  <body id="body" data-theme='light'>
 
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsa iure
-        esse eius, non et impedit minus dolore illum accusamus corporis deleniti
-        labore illo, doloribus ratione animi voluptates neque at?
-      </p>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="title">Light / Dark Mode</div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+
+    <div class="toggle-container container">
+      <div class="row">
+        <div class="col">
+          <input id="switch" name="theme" type="checkbox" /><label for="switch"
+            >Toggle</label
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsa iure
+            esse eius, non et impedit minus dolore illum accusamus corporis deleniti
+            labore illo, doloribus ratione animi voluptates neque at?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/publicJS/main.js"></script>
+
+  </body>
+</html>

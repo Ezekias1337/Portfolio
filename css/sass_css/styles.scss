@@ -3,6 +3,15 @@ html {
 	height: 100%;
 }
 
+body[data-theme='dark'] {
+	$bg: #333333;
+	$color-headings: #0077FF;
+	$color-text: #FCFCFC;
+
+	background-color: $bg;
+	color: $color-text;
+}
+
 body {
 	background-color: $bg;
 }
