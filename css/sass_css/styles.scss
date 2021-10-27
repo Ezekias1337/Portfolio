@@ -1,15 +1,149 @@
 @import "partials/variables";
 html {
 	height: 100%;
+	
 }
 
 body[data-theme='dark'] {
 	$bg: #333333;
+	$bg-secondary: #6B6B6B;
 	$color-headings: #0077FF;
+	$color-headings2: #F87641;
 	$color-text: #FCFCFC;
 
 	background-color: $bg;
 	color: $color-text;
+	.card {
+		background-color: $bg;
+		border: 2px solid $color-text;
+	}
+	.card-img-wrapper {
+		background-color: $bg-secondary;
+	}
+
+	.btn-primary {
+		background-color: $color-headings;
+	}
+
+	.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+		background-color: $bg;
+		color: $color-headings;
+	}
+
+	.diagonal-box {
+		background-image: linear-gradient(to right, $color-headings, $color-headings2);
+	}
+	
+	.navbar-dark, .form-control {
+		background-color: $bg-secondary !important;
+		color: $color-text;
+	}
+	
+	.contrasting-background-contact {
+		background-image: linear-gradient(to left, $color-headings, $color-headings2);
+	}
+
+	::selection {
+		background: $color-text; 
+		color: $color-headings
+	  }
+	  ::-moz-selection {
+		background: $color-text; 
+		color: $color-headings
+	  }
+}
+
+.contrasting-background-contact {
+	background-image: linear-gradient(to left, $color-headings, $color-headings2);
+}
+
+#navbar {
+	z-index: 1;
+}
+
+#contact-me-form-wrapper form{
+	width: 100%;
+}
+
+.contact-page-wrapper {
+	position: relative;
+}
+
+.contrasting-background-contact {
+	position: absolute;
+	top: 50%;
+	left: -1%;
+	width: 110%;
+	height: 170%;
+	z-index: 0;
+	transform: skewY(-30deg);
+}
+
+@keyframes change-text-color {
+	from {color: $color-text;}
+	to {color: $color-headings;}
+}
+
+
+
+#animated-text-container {
+	position: relative;
+	height: 100vh;
+}
+
+#animated-text {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  animation-name: change-text-color;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+
+#portfolio-button {
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 576px) {
+	#portfolio-button {
+		left: 32%;
+	}
+	#toggle-label {
+		margin-left: 0px !important;
+	}
+  }
+
+.technologies-used-logo {
+	width: 3vw;
+	border-radius: 0.5vw;
+}
+
+.technology-table tbody td{
+	vertical-align: middle;
+}
+
+.btn-primary {
+	background-color: $color-headings;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+	background-color: $bg;
+	color: $color-headings;
+}
+
+.card {
+	background-color: $bg;
+	border: 2px solid $color-text;
 }
 
 body {
@@ -22,7 +156,7 @@ input[type=checkbox]{
 	visibility: hidden;
 }
 
-label {
+#light-dark-label {
 	cursor: pointer;
 	text-indent: -9999px;
 	width: 52px;
@@ -32,7 +166,7 @@ label {
 	position: relative;
 }
 
-label:after {
+#light-dark-label:after {
 	content: '';
 	position: absolute;
 	top: 3px;
@@ -44,16 +178,16 @@ label:after {
 	transition: 0.3s;
 }
 
-input:checked + label {
+input:checked + #light-dark-label {
 	background: $color-headings;
 }
 
-input:checked + label:after {
+input:checked + #light-dark-label:after {
 	left: calc(100% - 5px);
 	transform: translateX(-100%);
 }
 
-label:active:after {
+#light-dark-label:active:after {
 	width: 45px;
 }
 
@@ -64,3 +198,22 @@ body.transition *:after {
 	transition: all 500ms !important;
 	transition-delay: 0 !important;
 }
+
+.diagonal-box {
+	background-image: linear-gradient(to right, $color-headings, $color-headings2);
+	transform: skewY(-5deg);
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	width: 100%;
+}
+
+.card-img-wrapper {
+	background-color: $bg-secondary;
+}
+
+.content, .content h1 {
+	max-width: 50em;
+	margin: 0 auto;
+	transform: skewY(2deg);
+}
+

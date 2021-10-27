@@ -43,3 +43,15 @@ app.use(
 app.get("/", (req, res) => {
   res.render("index.ejs", {title: "Home"})
 })
+
+app.get("/portfolio", (req, res) => {
+  res.render("portfolio.ejs", {title: "Portfolio"})
+})
+
+app.get("/about", (req, res) => {
+  res.render("about.ejs", {title: "About"})
+})
+
+app.get("/contact", (req, res) => {
+  res.render("contact.ejs", {title: "Contact"})
+})

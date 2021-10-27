@@ -11,9 +11,27 @@ checkbox.addEventListener("click", function () {
     if (checkbox.checked) {
         trans();
         document.getElementById("body").setAttribute("data-theme", "dark");
+        let tableArray = document.getElementsByClassName("technology-table");
+
+        for (const item of tableArray) {
+            item.classList.replace("table-light", "table-dark")
+        }
+
+        document.getElementById("navbar").classList.replace("navbar-light", "navbar-dark")
+        document.getElementById("navbar").classList.replace("bg-light", "bg-dark")
+
     } else {
         trans();
         document.getElementById("body").setAttribute("data-theme", "light");
+
+        let tableArray = document.getElementsByClassName("technology-table");
+
+        for (const item of tableArray) {
+            item.classList.replace("table-dark", "table-light")
+        }
+
+        document.getElementById("navbar").classList.replace("navbar-dark", "navbar-light")
+        document.getElementById("navbar").classList.replace("bg-dark", "bg-light")
     }
 })
 

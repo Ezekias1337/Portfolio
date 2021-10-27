@@ -2,35 +2,26 @@
 
 <html>
 
-  <body id="body" data-theme='light'>
-
-    <div class="container">
+  <body id="body" data-theme='dark'>
+    <%- include("./partials/navbar.ejs") %>
+    
+    
+    <div class="mt-1 container" id="animated-text-container">
       <div class="row">
-        <div class="col">
-          <p id="animated-text"></p>
+        <div class="col col-1"></div>
+        <div class="col col-10">
+          <h1 id="animated-text"></h1>
         </div>
+        <div class="col col-1"></div>
       </div>
-    </div>
-
-    <div class="toggle-container container">
       <div class="row">
-        <div class="col">
-          <input id="switch" name="theme" type="checkbox" /><label for="switch"
-            >Toggle</label
-          >
+        <div class="col col-5"></div>
+        <div class="col col-2">
+          <a href="/portfolio">
+            <button id="portfolio-button" class="btn btn-primary">View Portfolio</button>
+          </a>
         </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsa iure
-            esse eius, non et impedit minus dolore illum accusamus corporis deleniti
-            labore illo, doloribus ratione animi voluptates neque at?
-          </p>
-        </div>
+        <div class="col col-5"></div>
       </div>
     </div>
 
