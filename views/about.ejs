@@ -1,98 +1,172 @@
 <%- include("./partials/head.ejs") %>
 
 <html>
-
-  <body id="body" data-theme='dark'>
-
+  <body id="body" data-theme="dark">
     <%- include("./partials/navbar.ejs") %>
 
-
     <div class="contact-page-wrapper">
-        <div class="contrasting-background-contact">
-             
+      <div class="contrasting-background-about"></div>
+
+      <div class="container mb-5 mt-5 ps-0">
+        <div class="row">
+          <div class="col">
+            <h2 class="mb-5 header">About Me</h2>
+          </div>
         </div>
-        
-        
-        
-        <div class="container mb-5 mt-5 ps-0">
-            <div class="row">
-              <div class="col">
-                <h2 class="mb-5">About Me</h2>
-              </div>
-            </div>
+      </div>
+
+      <div id="contact-me-form-wrapper" class="container mt-5">
+        <div class="row">
+          <div class="col col-12 col-sm-6 position-relative mt-3">
+            <p>
+              I've been passionate about computers ever since childhood. I
+              remember the first time using inspect element to change the text
+              on a page, and being amazed at the possibilities. I knew from that
+              moment on that I wanted to work in software development. I'm an
+              incredibly passionate Front-End Web Developer with one year of
+              experience. I am currently working as a Front End Developer for
+              BuyChoice, and have a myriad of Portfolio projects which
+              demonstrate my design and technical skills.
+            </p>
           </div>
-      
-      
-          <div id="contact-me-form-wrapper" class="container mt-5">
-              <div class="row">
-                  <div class="col col-6 position-relative">
-                    <p>     Diligent recent bootcamp graduate with a Front End Web + Mobile Development certification with Honors. Currently working as a Software Developer for BuyChoice. Aiming to leverage acquired academic knowledge and proven communication, critical thinking, and problem-solving skills to successfully fill the Front End Web Development role at your company. Frequently praised as adaptable by my peers, I can be relied upon to help your company achieve its goals.</p>
-                    <h2 class="mb-2">Skills</h2>
-                    <table class="table table-hover table-dark table-striped technology-table">
-                      <thead>
-                        <tr>
-                          <th scope="col"></th>
-                          <th scope="col">Language Name</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><img src="/JS_Logo.png" class="ms-2 technologies-used-logo img-fluid" alt="Javascript Logo"/></td>
-                          <td>Javascript</td>
-                          
-                        </tr>
-                        <tr>
-                          <td><img src="/HTML_Logo.png" class="ms-2 technologies-used-logo img-fluid" alt="HTML Logo" /></td>
-                          <td>HTML 5</td>
-                          
-                        </tr>
-                        <tr>
-                          <td><img src="/CSS_Logo.png" class="ms-2 technologies-used-logo img-fluid" alt="CSS Logo" /></td>
-                          <td>CSS 3</td>
-                          
-                        </tr>
-                        <tr>
-                          <td><img src="/React_Logo.png" class="ms-2 technologies-used-logo img-fluid" alt="Javascript Logo"/></td>
-                          <td>React</td>
-                          
-                        </tr>
-                        <tr>
-                          <td><img src="/Bootstrap_Logo.png" class="ms-2 technologies-used-logo img-fluid" alt="Bootstrap Logo" /></td>
-                          <td>Bootstrap</td>
-                          
-                        </tr>
-                        <tr>
-                          <td><img src="/JSX_Logo.png" class="ms-2 technologies-used-logo img-fluid" alt="JSX Logo" /></td>
-                          <td>JSX</td>
-                          
-                        </tr>
-                        <tr>
-                          <td><img src="/SASS_Logo.png" class="ms-2 technologies-used-logo img-fluid" alt="CSS Logo" /></td>
-                          <td>SASS</td>
-                          
-                        </tr>
-                        <tr>
-                          <td><img src="/Node_JS_Logo.png" class="ms-2 technologies-used-logo img-fluid" alt="Node JS Logo" /></td>
-                          <td>Node JS</td>
-                          
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div style="z-index: 1;" class="col col-6">
-                      <img class="img-fluid" src="/Profile_Pic.JPG" alt="Picture of Frank" />
-                  </div>
-              </div>
+          <div style="z-index: 1" class="col col-12 col-sm-6">
+            <img
+              style="border-radius: 15px"
+              class="img-fluid"
+              src="/Profile_Pic.JPG"
+              alt="Picture of Frank"
+            />
           </div>
+          <div style="z-index: 1" class="col col-6">
+            <h1 class="mb-3">Skills</h1>
+            <p>
+              To the right you can see the languages and technologies in my
+              repertoire, ranked from most proficient to least. I am most
+              comfortable with Vanilla Javascript/CSS/HTML. However, I do have
+              great knowledge in using React and React Native.
+            </p>
+
+            <p>
+              Although I am a Front-End Developer, I do have some experience in
+              the Back-End of things, with Node JS (using Express) and Mongo DB.
+            </p>
+          </div>
+          <div style="z-index: 1" class="col col-6 mt-5">
+            <table
+              class="
+                table table-hover table-dark table-striped
+                technology-table
+              "
+            >
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Technology Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="/JS_Logo.png"
+                      class="ms-2 technologies-used-logo img-fluid"
+                      alt="Javascript Logo"
+                    />
+                  </td>
+                  <td>Javascript</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="/HTML_Logo.png"
+                      class="ms-2 technologies-used-logo img-fluid"
+                      alt="HTML Logo"
+                    />
+                  </td>
+                  <td>HTML 5</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="/CSS_Logo.png"
+                      class="ms-2 technologies-used-logo img-fluid"
+                      alt="CSS Logo"
+                    />
+                  </td>
+                  <td>CSS 3</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="/React_Logo.png"
+                      class="ms-2 technologies-used-logo img-fluid"
+                      alt="Javascript Logo"
+                    />
+                  </td>
+                  <td>React</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="/Bootstrap_Logo.png"
+                      class="ms-2 technologies-used-logo img-fluid"
+                      alt="Bootstrap Logo"
+                    />
+                  </td>
+                  <td>Bootstrap</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="/JSX_Logo.png"
+                      class="ms-2 technologies-used-logo img-fluid"
+                      alt="JSX Logo"
+                    />
+                  </td>
+                  <td>JSX</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="/SASS_Logo.png"
+                      class="ms-2 technologies-used-logo img-fluid"
+                      alt="CSS Logo"
+                    />
+                  </td>
+                  <td>SASS</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="/Node_JS_Logo.png"
+                      class="ms-2 technologies-used-logo img-fluid"
+                      alt="Node JS Logo"
+                    />
+                  </td>
+                  <td>Node JS</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="/Mongo_DB_Logo.png"
+                      class="ms-2 technologies-used-logo img-fluid"
+                      alt="Node JS Logo"
+                    />
+                  </td>
+                  <td>Mongo DB</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col"></div>
+        </div>
+      </div>
     </div>
 
-   
-
-
-
-    
-
     <script src="/publicJS/main.js"></script>
-
   </body>
 </html>

@@ -1,219 +1,297 @@
 @import "partials/variables";
 html {
-	height: 100%;
-	
+  height: 100%;
 }
 
-body[data-theme='dark'] {
-	$bg: #333333;
-	$bg-secondary: #6B6B6B;
-	$color-headings: #0077FF;
-	$color-headings2: #F87641;
-	$color-text: #FCFCFC;
+body[data-theme="dark"] {
+  $bg: #333333;
+  $bg-secondary: #6b6b6b;
+  $color-headings: #0077ff;
+  $color-headings2: #f87641;
+  $color-text: #fcfcfc;
 
-	background-color: $bg;
-	color: $color-text;
-	.card {
-		background-color: $bg;
-		border: 2px solid $color-text;
-	}
-	.card-img-wrapper {
-		background-color: $bg-secondary;
-	}
+  background-color: $bg;
+  color: $color-text;
 
-	.btn-primary {
-		background-color: $color-headings;
-	}
+  .header {
+    color: $color-headings;
+  }
+  .navbar-dark {
+    background-color: $bg !important;
+  }
+  .nav-link, #toggle-label {
+    color: $color-text !important;
+  }
+  .card {
+    background-color: $bg;
+    border: 2px solid $color-text;
+  }
+  .card-img-wrapper {
+    background-color: $bg-secondary !important;
+  }
 
-	.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-		background-color: $bg;
-		color: $color-headings;
-	}
+  .btn-primary {
+    background-color: $color-headings;
+    color: $color-text;
+    border: 1px solid $color-text;
+  }
 
-	.diagonal-box {
-		background-image: linear-gradient(to right, $color-headings, $color-headings2);
-	}
-	
-	.navbar-dark, .form-control {
-		background-color: $bg-secondary !important;
-		color: $color-text;
-	}
-	
-	.contrasting-background-contact {
-		background-image: linear-gradient(to left, $color-headings, $color-headings2);
-	}
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active {
+    background-color: $bg;
+    color: $color-text !important;
+  }
 
-	::selection {
-		background: $color-text; 
-		color: $color-headings
-	  }
-	  ::-moz-selection {
-		background: $color-text; 
-		color: $color-headings
-	  }
+  .diagonal-box {
+    background-image: linear-gradient(
+      to right,
+      $color-headings,
+      $gradient-color2
+    );
+  }
+
+  .form-control {
+    background-color: $bg-secondary !important;
+    color: $color-text;
+  }
+
+  .contrasting-background-contact,
+  .contrasting-background-about {
+    background-image: linear-gradient(
+      to right,
+      $color-headings,
+      $gradient-color2
+    );
+  }
+
+  ::selection {
+    background: $color-text;
+    color: $color-headings;
+  }
+  ::-moz-selection {
+    background: $color-text;
+    color: $color-headings;
+  }
 }
 
-.contrasting-background-contact {
-	background-image: linear-gradient(to left, $color-headings, $color-headings2);
+.nav-link, #toggle-label {
+  color: $color-text !important;
+}
+
+.header {
+  color: $color-headings;
+}
+
+.navbar-light {
+  background-color: $bg !important;
 }
 
 #navbar {
-	z-index: 1;
+  z-index: 1;
 }
 
-#contact-me-form-wrapper form{
-	width: 100%;
+#contact-me-form-wrapper form {
+  width: 100%;
 }
 
 .contact-page-wrapper {
-	position: relative;
+  position: relative;
+  max-height: 500px;
 }
 
 .contrasting-background-contact {
-	position: absolute;
-	top: 50%;
-	left: -1%;
-	width: 110%;
-	height: 170%;
-	z-index: 0;
-	transform: skewY(-30deg);
+  position: absolute;
+  top: 47.5%;
+  left: -1%;
+  width: 110%;
+  height: 170%;
+  z-index: 0;
+  transform: skewY(-30deg);
+  background-image: linear-gradient(
+      to right,
+      $color-headings,
+      $gradient-color2
+    );
+}
+
+.contrasting-background-about {
+  position: absolute;
+  top: 44.5%;
+  left: -1%;
+  width: 110%;
+  height: 170%;
+  z-index: 0;
+  transform: skewY(-30deg);
+  background-image: linear-gradient(
+      to right,
+      $color-headings,
+      $gradient-color2
+    );
 }
 
 @keyframes change-text-color {
-	from {color: $color-text;}
-	to {color: $color-headings;}
+  from {
+    color: $color-text;
+  }
+  to {
+    color: $color-headings;
+  }
 }
 
-
-
 #animated-text-container {
-	position: relative;
-	height: 100vh;
+  position: relative;
+  height: 100vh;
+  display: block;
+  width: 80vw;
 }
 
 #animated-text {
-  margin: 0;
   position: absolute;
   top: 50%;
-  left: 2%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   animation-name: change-text-color;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  text-align: center;
 }
 
-
-
 #portfolio-button {
-  margin: 0;
   position: absolute;
-  top: 60%;
+  top: 80%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
 @media only screen and (max-width: 576px) {
-	#portfolio-button {
-		left: 32%;
-	}
-	#toggle-label {
-		margin-left: 0px !important;
-	}
+  #portfolio-button {
+    left: 28%;
+  }
+  #animated-text {
+    left: -2%;
+  }
+  #toggle-label {
+    margin-left: 0px !important;
+  }
+  .header {
+    margin-left: 10px;
+  }
+  .contact-form {
+    margin-left: 10px;
+    width: 95%;
   }
 
-.technologies-used-logo {
-	width: 3vw;
-	border-radius: 0.5vw;
+  #contact-me-form-wrapper > div > div.col.col-12.col-sm-6.position-relative.contact-form > form {
+    transform: translate(-50%,-15%)!important;
+  }
+  
 }
 
-.technology-table tbody td{
-	vertical-align: middle;
+.technologies-used-logo {
+  width: 3vw;
+  border-radius: 0.5vw;
+}
+
+.technology-table tbody td {
+  vertical-align: middle;
 }
 
 .btn-primary {
-	background-color: $color-headings;
+  background-color: $color-headings;
+  color: $color-text;
+  border: 1px solid $color-text;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-	background-color: $bg;
-	color: $color-headings;
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: $bg;
+  color: $color-headings;
 }
 
 .card {
-	background-color: $bg;
-	border: 2px solid $color-text;
+  background-color: $bg;
+  border: 2px solid $color-text;
 }
 
 body {
-	background-color: $bg;
+  background-color: $bg;
 }
 
-input[type=checkbox]{
-	height: 0;
-	width: 0;
-	visibility: hidden;
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
 }
 
 #light-dark-label {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 52px;
-	height: 27px;
-	background: grey;
-	border-radius: 100px;
-	position: relative;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: $color-headings2;
+  border-radius: 100px;
+  position: relative;
 }
 
 #light-dark-label:after {
-	content: '';
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 20px;
-	height: 20px;
-	background: #fff;
-	border-radius: 90px;
-	transition: 0.3s;
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
 }
 
 input:checked + #light-dark-label {
-	background: $color-headings;
+  background: $color-headings;
 }
 
 input:checked + #light-dark-label:after {
-	left: calc(100% - 5px);
-	transform: translateX(-100%);
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
 }
 
 #light-dark-label:active:after {
-	width: 45px;
+  width: 45px;
 }
 
 body.transition,
 body.transition *,
 body.transition *:before,
 body.transition *:after {
-	transition: all 500ms !important;
-	transition-delay: 0 !important;
+  transition: all 500ms !important;
+  transition-delay: 0 !important;
 }
 
 .diagonal-box {
-	background-image: linear-gradient(to right, $color-headings, $color-headings2);
-	transform: skewY(-5deg);
-	margin-left: 0px !important;
-	margin-right: 0px !important;
-	width: 100%;
+  background-image: linear-gradient(
+      to right,
+      $color-headings,
+      $gradient-color2
+    );
+  transform: skewY(-12.8deg);
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  width: 100%;
+}
+
+.diagonal-box .content {
+  transform: skewY(12.8deg);
 }
 
 .card-img-wrapper {
-	background-color: $bg-secondary;
+  background-color: $bg-secondary !important;
 }
 
-.content, .content h1 {
-	max-width: 50em;
-	margin: 0 auto;
-	transform: skewY(2deg);
+.content,
+.content h1 {
+  max-width: 50em;
+  margin: 0 auto;
+  transform: skewY(2deg);
 }
-

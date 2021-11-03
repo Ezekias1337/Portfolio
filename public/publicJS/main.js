@@ -63,7 +63,7 @@ function trailingUnderScore() {
 }
 
 function intervalForCurson() {
-    setInterval(trailingUnderScore, 1000);
+    setInterval(trailingUnderScore, 500);
 }
 
 animateTextTyping();

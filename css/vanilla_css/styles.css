@@ -1,35 +1,52 @@
 html {
   height: 100%; }
 
-body[data-theme='dark'] {
+body[data-theme="dark"] {
   background-color: #333333;
-  color: #FCFCFC; }
-  body[data-theme='dark'] .card {
+  color: #fcfcfc; }
+  body[data-theme="dark"] .header {
+    color: #0077ff; }
+  body[data-theme="dark"] .navbar-dark {
+    background-color: #333333 !important; }
+  body[data-theme="dark"] .nav-link, body[data-theme="dark"] #toggle-label {
+    color: #fcfcfc !important; }
+  body[data-theme="dark"] .card {
     background-color: #333333;
-    border: 2px solid #FCFCFC; }
-  body[data-theme='dark'] .card-img-wrapper {
-    background-color: #6B6B6B; }
-  body[data-theme='dark'] .btn-primary {
-    background-color: #0077FF; }
-  body[data-theme='dark'] .btn-primary:hover, body[data-theme='dark'] .btn-primary:focus, body[data-theme='dark'] .btn-primary:active {
+    border: 2px solid #fcfcfc; }
+  body[data-theme="dark"] .card-img-wrapper {
+    background-color: #6b6b6b !important; }
+  body[data-theme="dark"] .btn-primary {
+    background-color: #0077ff;
+    color: #fcfcfc;
+    border: 1px solid #fcfcfc; }
+  body[data-theme="dark"] .btn-primary:hover,
+  body[data-theme="dark"] .btn-primary:focus,
+  body[data-theme="dark"] .btn-primary:active {
     background-color: #333333;
-    color: #0077FF; }
-  body[data-theme='dark'] .diagonal-box {
-    background-image: linear-gradient(to right, #0077FF, #F87641); }
-  body[data-theme='dark'] .navbar-dark, body[data-theme='dark'] .form-control {
-    background-color: #6B6B6B !important;
-    color: #FCFCFC; }
-  body[data-theme='dark'] .contrasting-background-contact {
-    background-image: linear-gradient(to left, #0077FF, #F87641); }
-  body[data-theme='dark'] ::selection {
-    background: #FCFCFC;
-    color: #0077FF; }
-  body[data-theme='dark'] ::-moz-selection {
-    background: #FCFCFC;
-    color: #0077FF; }
+    color: #fcfcfc !important; }
+  body[data-theme="dark"] .diagonal-box {
+    background-image: linear-gradient(to right, #0077ff, #00F6F7); }
+  body[data-theme="dark"] .form-control {
+    background-color: #6b6b6b !important;
+    color: #fcfcfc; }
+  body[data-theme="dark"] .contrasting-background-contact,
+  body[data-theme="dark"] .contrasting-background-about {
+    background-image: linear-gradient(to right, #0077ff, #00F6F7); }
+  body[data-theme="dark"] ::selection {
+    background: #fcfcfc;
+    color: #0077ff; }
+  body[data-theme="dark"] ::-moz-selection {
+    background: #fcfcfc;
+    color: #0077ff; }
 
-.contrasting-background-contact {
-  background-image: linear-gradient(to left, #268bff, #FAA05C); }
+.nav-link, #toggle-label {
+  color: #333333 !important; }
+
+.header {
+  color: #268bff; }
+
+.navbar-light {
+  background-color: #fcfcfc !important; }
 
 #navbar {
   z-index: 1; }
@@ -38,16 +55,28 @@ body[data-theme='dark'] {
   width: 100%; }
 
 .contact-page-wrapper {
-  position: relative; }
+  position: relative;
+  max-height: 500px; }
 
 .contrasting-background-contact {
   position: absolute;
-  top: 50%;
+  top: 47.5%;
   left: -1%;
   width: 110%;
   height: 170%;
   z-index: 0;
-  transform: skewY(-30deg); }
+  transform: skewY(-30deg);
+  background-image: linear-gradient(to right, #268bff, #00F6F7); }
+
+.contrasting-background-about {
+  position: absolute;
+  top: 44.5%;
+  left: -1%;
+  width: 110%;
+  height: 170%;
+  z-index: 0;
+  transform: skewY(-30deg);
+  background-image: linear-gradient(to right, #268bff, #00F6F7); }
 
 @keyframes change-text-color {
   from {
@@ -57,32 +86,41 @@ body[data-theme='dark'] {
 
 #animated-text-container {
   position: relative;
-  height: 100vh; }
+  height: 100vh;
+  display: block;
+  width: 80vw; }
 
 #animated-text {
-  margin: 0;
   position: absolute;
   top: 50%;
-  left: 2%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   animation-name: change-text-color;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  animation-direction: alternate; }
+  animation-direction: alternate;
+  text-align: center; }
 
 #portfolio-button {
-  margin: 0;
   position: absolute;
-  top: 60%;
+  top: 80%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
 @media only screen and (max-width: 576px) {
   #portfolio-button {
-    left: 32%; }
+    left: 28%; }
+  #animated-text {
+    left: -2%; }
   #toggle-label {
-    margin-left: 0px !important; } }
+    margin-left: 0px !important; }
+  .header {
+    margin-left: 10px; }
+  .contact-form {
+    margin-left: 10px;
+    width: 95%; }
+  #contact-me-form-wrapper > div > div.col.col-12.col-sm-6.position-relative.contact-form > form {
+    transform: translate(-50%, -15%) !important; } }
 
 .technologies-used-logo {
   width: 3vw;
@@ -92,20 +130,24 @@ body[data-theme='dark'] {
   vertical-align: middle; }
 
 .btn-primary {
-  background-color: #268bff; }
+  background-color: #268bff;
+  color: #333333;
+  border: 1px solid #333333; }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #FCFCFC;
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #fcfcfc;
   color: #268bff; }
 
 .card {
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
   border: 2px solid #333333; }
 
 body {
-  background-color: #FCFCFC; }
+  background-color: #fcfcfc; }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   height: 0;
   width: 0;
   visibility: hidden; }
@@ -115,12 +157,12 @@ input[type=checkbox] {
   text-indent: -9999px;
   width: 52px;
   height: 27px;
-  background: grey;
+  background: #faa05c;
   border-radius: 100px;
   position: relative; }
 
 #light-dark-label:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 3px;
   left: 3px;
@@ -148,16 +190,20 @@ body.transition *:after {
   transition-delay: 0 !important; }
 
 .diagonal-box {
-  background-image: linear-gradient(to right, #268bff, #FAA05C);
-  transform: skewY(-5deg);
+  background-image: linear-gradient(to right, #268bff, #00F6F7);
+  transform: skewY(-12.8deg);
   margin-left: 0px !important;
   margin-right: 0px !important;
   width: 100%; }
 
-.card-img-wrapper {
-  background-color: #b4b4b4; }
+.diagonal-box .content {
+  transform: skewY(12.8deg); }
 
-.content, .content h1 {
+.card-img-wrapper {
+  background-color: #b4b4b4 !important; }
+
+.content,
+.content h1 {
   max-width: 50em;
   margin: 0 auto;
   transform: skewY(2deg); }
