@@ -40,6 +40,7 @@ checkbox.addEventListener("click", function () {
 let i = 0;
 const text = "Hello, I'm Frank Edwards. A Front End Web Developer..._";
 const speed = 75;
+const animationDone = false;
 
 function animateTextTyping() {
     
@@ -47,6 +48,8 @@ function animateTextTyping() {
         document.getElementById("animated-text").innerHTML += text.charAt(i);
         i++;
         setTimeout(animateTextTyping, speed);
+    } else if (i === text.length) {
+        animationDone = true;
     }
 
 }
@@ -57,9 +60,9 @@ function trailingUnderScore() {
     if(document.getElementById("animated-text").innerHTML[indexForComparison] === "_") {
         let newStr = document.getElementById("animated-text").innerHTML.substring(0, document.getElementById("animated-text").innerHTML.length - 1)
         document.getElementById("animated-text").innerHTML = newStr;     
-        } else {
+    } else if(document.getElementById("animated-text").innerHTML[indexForComparison] !== "_" && document.getElementById("animated-text").innerHTML[indexForComparison] === "." && document.getElementById("animated-text").innerHTML[indexForComparison - 1] === "." && document.getElementById("animated-text").innerHTML[indexForComparison - 2] === ".") {
             document.getElementById("animated-text").innerHTML = document.getElementById("animated-text").innerHTML + "_";
-        } 
+    } 
 }
 
 function intervalForCurson() {
@@ -67,4 +70,4 @@ function intervalForCurson() {
 }
 
 animateTextTyping();
-setTimeout(intervalForCurson, 4000)
+intervalForCurson();

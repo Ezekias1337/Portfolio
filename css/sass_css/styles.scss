@@ -1,6 +1,7 @@
 @import "partials/variables";
 html {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body[data-theme="dark"] {
