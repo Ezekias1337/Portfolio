@@ -1,7 +1,10 @@
 html, body {
   height: 100%; }
 
-body {
+html#homepage-html {
+  overflow-y: hidden; }
+
+body#homepage-body {
   display: table;
   width: 100%;
   height: 100%;
@@ -17,7 +20,9 @@ body {
   right: 0;
   height: 100%;
   margin: auto;
-  width: 100%; }
+  width: 100%;
+  z-index: 0;
+  pointer-events: none; }
 
 .line {
   position: absolute;
@@ -126,6 +131,9 @@ body[data-theme="dark"] {
   body[data-theme="dark"] ::-moz-selection {
     background: #fcfcfc;
     color: #0077ff; }
+
+#portfolio-link, #portfolio-button {
+  z-index: 1; }
 
 .nav-link, #toggle-label {
   color: #333333 !important; }

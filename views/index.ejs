@@ -1,7 +1,7 @@
 <%- include("./partials/head.ejs") %>
 
-<html>
-  <body id="body" data-theme="dark" class="homepage-animated">
+<html id="homepage-html">
+  <body id="homepage-body" data-theme="dark" class="homepage-animated">
     <%- include("./partials/navbar.ejs") %>
 
     <div class="mt-1 container" id="animated-text-container">
@@ -38,7 +38,7 @@
       <div class="row mt-5">
         <div class="col col-4"></div>
         <div class="col col-4">
-          <a href="/portfolio">
+          <a id="portfolio-link" href="/portfolio">
             <button id="portfolio-button" class="btn btn-primary">
               View Portfolio
             </button>

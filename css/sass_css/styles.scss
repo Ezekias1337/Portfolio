@@ -78,6 +78,10 @@ body[data-theme="dark"] {
   }
 }
 
+#portfolio-link, #portfolio-button {
+  z-index: 1;
+}
+
 .nav-link, #toggle-label {
   color: $color-text !important;
 }
