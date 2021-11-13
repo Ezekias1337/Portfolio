@@ -82,6 +82,22 @@ body[data-theme="dark"] {
   z-index: 1;
 }
 
+.portfolio-button-animated {
+  animation-duration: 2s;
+  animation-name: fade-in-portfolio-button;
+  animation-iteration-count: 1;
+}
+
+@keyframes fade-in-portfolio-button {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100% !important;
+  }
+}
+
 .nav-link, #toggle-label {
   color: $color-text !important;
 }

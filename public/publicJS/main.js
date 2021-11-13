@@ -43,7 +43,8 @@ checkbox.addEventListener("click", function () {
 let i = 0;
 const text = "Hello, I'm Frank Edwards. A Front End Web Developer..._";
 const speed = 75;
-const animationDone = false;
+let animationDone = false;
+let buttonAppendedToDOM = false;
 
 function animateTextTyping() {
   if (i < text.length) {
@@ -63,6 +64,18 @@ function trailingUnderScore() {
     document.getElementById("animated-text").innerHTML[indexForComparison] ===
     "_"
   ) {
+    if (buttonAppendedToDOM === false) {
+      const node = document.createElement("button");
+      node.id = "portfolio-button";
+      node.className = "btn btn-primary";
+      node.innerText = "View Portfolio";
+
+      document.getElementById("portfolio-link").appendChild(node);
+      buttonAppendedToDOM = true;
+    } 
+    document
+      .getElementById("portfolio-button")
+      .classList.add("portfolio-button-animated");
     let newStr = document
       .getElementById("animated-text")
       .innerHTML.substring(
