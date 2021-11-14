@@ -16,13 +16,18 @@ body[data-theme="dark"] {
   background-color: $bg;
   color: $color-text;
 
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 119, 255, 0.2%) !important;
+  }
+
   .header {
     color: $color-headings;
   }
   .navbar-dark {
     background-color: $bg !important;
   }
-  .nav-link, #toggle-label {
+  .nav-link,
+  #toggle-label {
     color: $color-text !important;
   }
   .card {
@@ -78,27 +83,61 @@ body[data-theme="dark"] {
   }
 }
 
-#portfolio-link, #portfolio-button {
+#portfolio-link,
+#portfolio-button {
   z-index: 1;
+}
+
+#portfolio-button {
+  background-image: linear-gradient(
+    to right,
+    $color-headings,
+    $gradient-color2
+  );
+}
+
+#portfolio-button:hover {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 119, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+#portfolio-button:hover {
+  //animation-name: button-drain;
+  animation-duration: 3s;
 }
 
 .portfolio-button-animated {
   animation-duration: 2s;
   animation-name: fade-in-portfolio-button;
   animation-iteration-count: 1;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-name: fade-in-portfolio-button;
+  -webkit-animation-iteration-count: 1;
 }
 
 @keyframes fade-in-portfolio-button {
   from {
     opacity: 0%;
+    width: 0%;
+    height: 0%;
   }
 
   to {
-    opacity: 100% !important;
+    opacity: 100%;
+    width: 100%;
+    height: 100%;
   }
 }
 
-.nav-link, #toggle-label {
+.nav-link,
+#toggle-label {
   color: $color-text !important;
 }
 
@@ -176,10 +215,10 @@ body[data-theme="dark"] {
   z-index: 0;
   transform: skewY(-30deg);
   background-image: linear-gradient(
-      to right,
-      $color-headings,
-      $gradient-color2
-    );
+    to right,
+    $color-headings,
+    $gradient-color2
+  );
 }
 
 .contrasting-background-about {
@@ -191,18 +230,18 @@ body[data-theme="dark"] {
   z-index: 0;
   transform: skewY(-30deg);
   background-image: linear-gradient(
-      to right,
-      $color-headings,
-      $gradient-color2
-    );
+    to right,
+    $color-headings,
+    $gradient-color2
+  );
 }
 
 @keyframes change-text-color {
   from {
-    color: $color-text;
+    opacity: 0%;
   }
   to {
-    color: $color-headings;
+    opacity: 100%;
   }
 }
 
@@ -215,10 +254,17 @@ body[data-theme="dark"] {
 
 #animated-text {
   animation-name: change-text-color;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   text-align: center;
+  background-image: linear-gradient(
+    to right,
+    $color-headings,
+    $gradient-color2
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #portfolio-button {
@@ -243,10 +289,12 @@ body[data-theme="dark"] {
     width: 95%;
   }
 
-  #contact-me-form-wrapper > div > div.col.col-12.col-sm-6.position-relative.contact-form > form {
-    transform: translate(-50%,-15%)!important;
+  #contact-me-form-wrapper
+    > div
+    > div.col.col-12.col-sm-6.position-relative.contact-form
+    > form {
+    transform: translate(-50%, -15%) !important;
   }
-  
 }
 
 .technologies-used-logo {
@@ -331,10 +379,10 @@ body.transition *:after {
 
 .diagonal-box {
   background-image: linear-gradient(
-      to right,
-      $color-headings,
-      $gradient-color2
-    );
+    to right,
+    $color-headings,
+    $gradient-color2
+  );
   transform: skewY(-12.8deg);
   margin-left: 0px !important;
   margin-right: 0px !important;

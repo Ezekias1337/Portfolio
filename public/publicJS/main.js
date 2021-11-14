@@ -68,14 +68,18 @@ function trailingUnderScore() {
       const node = document.createElement("button");
       node.id = "portfolio-button";
       node.className = "btn btn-primary";
-      node.innerText = "View Portfolio";
 
       document.getElementById("portfolio-link").appendChild(node);
       buttonAppendedToDOM = true;
     } 
+
     document
       .getElementById("portfolio-button")
       .classList.add("portfolio-button-animated");
+
+    /* document
+      .getElementById("portfolio-button").innerText = "View Portfolio"; */
+
     let newStr = document
       .getElementById("animated-text")
       .innerHTML.substring(
@@ -95,8 +99,10 @@ function trailingUnderScore() {
       indexForComparison - 2
     ] === "."
   ) {
+    document
+      .getElementById("portfolio-button").innerText = "View Portfolio";
     document.getElementById("animated-text").innerHTML =
-      document.getElementById("animated-text").innerHTML + "_";
+    document.getElementById("animated-text").innerHTML + "_";
   }
 }
 
