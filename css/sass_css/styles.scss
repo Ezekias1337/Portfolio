@@ -73,6 +73,11 @@ body[data-theme="dark"] {
     );
   }
 
+  ::-moz-selection {
+    background: $color-text;
+    color: $color-headings;
+  }
+
   ::selection {
     background: $color-text;
     color: $color-headings;
@@ -110,16 +115,32 @@ body[data-theme="dark"] {
 
 #portfolio-button:hover {
   //animation-name: button-drain;
+  -webkit-animation-duration: 3s;
   animation-duration: 3s;
 }
 
 .portfolio-button-animated {
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
   animation-name: fade-in-portfolio-button;
   animation-iteration-count: 1;
   -webkit-animation-duration: 2.5s;
   -webkit-animation-name: fade-in-portfolio-button;
   -webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes fade-in-portfolio-button {
+  from {
+    opacity: 0%;
+    width: 0%;
+    height: 0%;
+  }
+
+  to {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @keyframes fade-in-portfolio-button {
@@ -130,7 +151,7 @@ body[data-theme="dark"] {
   }
 
   to {
-    opacity: 100%;
+    opacity: 1;
     width: 100%;
     height: 100%;
   }
@@ -143,8 +164,22 @@ body[data-theme="dark"] {
 
 .header {
   color: $color-headings;
+  -webkit-animation-duration: 3s;
   animation-duration: 3s;
+  -webkit-animation-name: header-slide;
   animation-name: header-slide;
+}
+
+@-webkit-keyframes header-slide {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @keyframes header-slide {
@@ -160,22 +195,48 @@ body[data-theme="dark"] {
 }
 
 .portfolio-slide {
-  animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: portfolio-slide;
   animation-name: portfolio-slide;
 }
 
 .right-slide {
+  -webkit-animation-duration: 3s;
   animation-duration: 3s;
+  -webkit-animation-name: right-slide;
   animation-name: right-slide;
 }
 
+@-webkit-keyframes portfolio-slide {
+  from {
+    transform: rotateY(180deg);
+    opacity: 0%;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
 @keyframes portfolio-slide {
+  from {
+    transform: rotateY(180deg);
+    opacity: 0%;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes right-slide {
   from {
     margin-left: 100%;
   }
 
   to {
-    margin-left: 0%;
+    margin-left: 3.5%;
   }
 }
 
@@ -236,12 +297,21 @@ body[data-theme="dark"] {
   );
 }
 
-@keyframes change-text-color {
+@-webkit-keyframes change-text-color {
   from {
     opacity: 0%;
   }
   to {
-    opacity: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes change-text-color {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -253,9 +323,13 @@ body[data-theme="dark"] {
 }
 
 #animated-text {
+  -webkit-animation-name: change-text-color;
   animation-name: change-text-color;
+  -webkit-animation-duration: 4s;
   animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
   animation-direction: alternate;
   text-align: center;
   background-image: linear-gradient(
@@ -264,6 +338,7 @@ body[data-theme="dark"] {
     $gradient-color2
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -279,7 +354,7 @@ body[data-theme="dark"] {
     left: -2%;
   }
   #toggle-label {
-    margin-left: 0px !important;
+    margin-left: 1.5px !important;
   }
   .header {
     margin-left: 10px;
@@ -300,10 +375,68 @@ body[data-theme="dark"] {
 .technologies-used-logo {
   width: 3vw;
   border-radius: 0.5vw;
+  /* -webkit-animation-name: portfolio-slide;
+  animation-name: portfolio-slide;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  animation-direction: forwards;
+  -webkit-animation-direction: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  opacity: 0%; */
 }
 
-.technology-table tbody td {
+.animate-technologies-used-logos {
+  -webkit-animation-name: portfolio-slide;
+  animation-name: portfolio-slide;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  animation-direction: forwards;
+  -webkit-animation-direction: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.technology-table td {
   vertical-align: middle;
+  -webkit-animation-name: fade-in-table-text;
+  animation-name: fade-in-table-text;
+  -webkit-animation-duration: 3s;
+  animation-duration: 5s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  animation-direction: forwards;
+  -webkit-animation-direction: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+@-webkit-keyframes fade-in-table-text {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-table-text {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .btn-primary {
